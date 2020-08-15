@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalController } from '@ionic/angular';
+import { PomodoroModalComponent } from '../pomodoro-modal/pomodoro-modal.component';
+
 
 @Component({
   selector: 'app-pomodoro',
@@ -12,7 +15,10 @@ export class PomodoroPage implements OnInit {
   message: string;
   pomodoroCount = 0;
 
-  constructor(private modalService: NgbModal) { }
+  constructor(
+    private modalService: NgbModal,
+    private modalCtrl: ModalController
+    ) { }
 
   ngOnInit() {
   }
@@ -74,4 +80,12 @@ export class PomodoroPage implements OnInit {
     }
   }
 
+
+  async openPomodoroModal() {
+    const modal = await this.modalCtrl.create({
+      component: PomodoroModalComponent
+    });
+
+    await modal.present();
+  }
 }
