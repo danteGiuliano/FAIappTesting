@@ -22,7 +22,7 @@
         <app-timer *ngSwitchCase="'long'" [m]=10 [s]=0 (onComplete)="onTimerComplete(content)"></app-timer>
     </div>
 
-    <p class="counter"><em>Has conseguido {{pomodoroCount}} Pomodoros en ésta sesión de estudio</em></p>
+    <p class="counter"><em>Has conseguido {{pomodoroCount}} Pomodoros en ésta sesión</em></p>
 
     <ng-template #content let-c="close" let-d="dismiss">
         <div class="modal-header">
