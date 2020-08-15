@@ -25,7 +25,7 @@
     <div [ngSwitch]="this.mode">
         <app-timer *ngSwitchCase="'pomodoro'" [m]=25 [s]=0 (onComplete)="onTimerComplete(content)"></app-timer>
         <app-timer *ngSwitchCase="'short'" [m]=5 [s]=0 (onComplete)="onTimerComplete(content)"></app-timer>
-        <app-timer *ngSwitchCase="'long'" [m]=10 [s]=0 (onComplete)="onTimerComplete(content)"></app-timer>
+        <app-timer *ngSwitchCase="'long'" [m]=15 [s]=0 (onComplete)="onTimerComplete(content)"></app-timer>
     </div>
 
     <p class="counter"><em>Has conseguido {{pomodoroCount}} Pomodoros en ésta sesión</em></p>
