@@ -7,14 +7,23 @@ import { IonicModule } from '@ionic/angular';
 import { PomodoroPageRoutingModule } from './pomodoro-routing.module';
 
 import { PomodoroPage } from './pomodoro.page';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TimerComponent } from './timer/timer.component';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PomodoroPageRoutingModule
+    PomodoroPageRoutingModule,
+    NgbModule
   ],
-  declarations: [PomodoroPage]
+  declarations: [
+    PomodoroPage,
+    TimerComponent
+  ],
+  providers: [],
+  bootstrap: [PomodoroPage]
 })
 export class PomodoroPageModule {}

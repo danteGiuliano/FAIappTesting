@@ -10,4 +10,33 @@
 
 <ion-content>
 
+    <div class="controls">
+        <button type="button" class="btn btn-primary" (click)="switchToPomodoro()">Pomodoro</button>
+        <button type="button" class="btn btn-primary" (click)="switchToShortBreak()">Short Break</button>
+        <button type="button" class="btn btn-primary" (click)="switchToLongBreak()">Long Break</button>
+    </div>
+
+    <div [ngSwitch]="this.mode">
+        <app-timer *ngSwitchCase="'pomodoro'" [m]=25 [s]=0 (onComplete)="onTimerComplete(content)"></app-timer>
+        <app-timer *ngSwitchCase="'short'" [m]=5 [s]=0 (onComplete)="onTimerComplete(content)"></app-timer>
+        <app-timer *ngSwitchCase="'long'" [m]=10 [s]=0 (onComplete)="onTimerComplete(content)"></app-timer>
+    </div>
+
+    <p class="counter"><em>Has conseguido {{pomodoroCount}} Pomodoros en ésta sesión de estudio</em></p>
+
+    <ng-template #content let-c="close" let-d="dismiss">
+        <div class="modal-header">
+            <h4 class="modal-title">Se acabó el tiempo!</h4>
+            <button type="button" class="close" aria-label="Close" (click)="d()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <p>{{message}}</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" (click)="c()">Close</button>
+        </div>
+    </ng-template>
+
 </ion-content>
