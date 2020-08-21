@@ -9,7 +9,7 @@ import { PomodoroPageRoutingModule } from './pomodoro-routing.module';
 import { PomodoroPage } from './pomodoro.page';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TimerComponent } from './timer/timer.component';
-import { PomodoroModalComponent } from '../pomodoro-modal/pomodoro-modal.component';
+import { PomodoroModalComponent } from './pomodoro-modal/pomodoro-modal.component';
 
 
 @NgModule({

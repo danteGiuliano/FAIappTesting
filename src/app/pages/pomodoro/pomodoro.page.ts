@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalController } from '@ionic/angular';
-import { PomodoroModalComponent } from '../pomodoro-modal/pomodoro-modal.component';
+import { PomodoroModalComponent } from './pomodoro-modal/pomodoro-modal.component';
 
 
 @Component({
