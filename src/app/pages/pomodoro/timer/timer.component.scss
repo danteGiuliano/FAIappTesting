@@ -2,7 +2,7 @@ h1 {
     width: 100%;
     text-align: center;
     font-size: 125px;
-    font-family: "Lucida Console", Monaco, monospace;
+    font-family: "Sans Serif", Roboto, monospace;
 }
 
 .container {
@@ -21,6 +21,20 @@ h1 {
 }
 
 .btn {
-    width: 25%;
+    width: 30%;
     margin: 1%;
+}
+
+.btn-success {
+    background-color: #2dd34f;
+    font-size: 16px;
+}
+
+.btn-danger {
+    background-color: #f97068;
+    font-size: 16px;
+}
+
+.btn-secondary {
+    font-size: 16px;
 }

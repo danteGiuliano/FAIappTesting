@@ -15,9 +15,17 @@ p {
     text-align: center;
 }
 
+em {
+    font-family: "Roboto";
+}
+
 button {
     width: 30%;
     margin: 0.5%;
+}
+
+.btn-primary {
+    width: 33%;
 }
 
 .controls {
